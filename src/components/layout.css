@@ -1,3 +1,16 @@
+@import url("https://fonts.googleapis.com/css?family=Righteous|Roboto&display=swap");
+
+/* font-family: 'Roboto', sans-serif;
+font-family: 'Righteous', cursive; */
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+}
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -7,6 +20,8 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(3, 22, 83);
+  color: white;
 }
 article,
 aside,
@@ -42,6 +57,8 @@ template {
 a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
+  color: white;
+  font-family: "Roboto", sans-serif;
 }
 a:active,
 a:hover {
@@ -50,6 +67,7 @@ a:hover {
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
 }
 b,
@@ -60,10 +78,7 @@ strong {
 dfn {
   font-style: italic;
 }
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
+
 mark {
   background-color: #ff0;
   color: #000;
@@ -101,6 +116,7 @@ figure {
   margin: 1em 40px;
 }
 hr {
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
   overflow: visible;
@@ -149,6 +165,7 @@ fieldset {
   padding: 0.35em 0.625em 0.75em;
 }
 legend {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   color: inherit;
   display: table;
@@ -161,6 +178,7 @@ textarea {
 }
 [type="checkbox"],
 [type="radio"] {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0;
 }
@@ -186,16 +204,20 @@ textarea {
 }
 html {
   font: 112.5%/1.45em georgia, serif;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   overflow-y: scroll;
 }
 * {
+  -webkit-box-sizing: inherit;
   box-sizing: inherit;
 }
 *:before {
+  -webkit-box-sizing: inherit;
   box-sizing: inherit;
 }
 *:after {
+  -webkit-box-sizing: inherit;
   box-sizing: inherit;
 }
 body {
@@ -203,8 +225,8 @@ body {
   font-family: georgia, serif;
   font-weight: normal;
   word-wrap: break-word;
+  -webkit-font-kerning: normal;
   font-kerning: normal;
-  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
@@ -229,13 +251,13 @@ h1 {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 2.25rem;
   line-height: 1.1;
+  font-family: "Righteous", cursive;
 }
 h2 {
   margin-left: 0;
@@ -385,6 +407,8 @@ p {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
 }
 figure {
   margin-left: 0;
