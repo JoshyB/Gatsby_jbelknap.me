@@ -4,19 +4,19 @@ import React from "react"
 import styled from "styled-components"
 
 const Navigation = styled.nav`
-  text-align: right;
-  grid-column: 3;
-  margin-left: auto;
   ul {
+    text-align: right;
     list-style: none;
+    li {
+      margin: 10px;
+      a {
+        text-decoration: none;
+        padding: 5px;
 
-    a {
-      text-decoration: none;
-      padding: 5px;
-
-      &:hover,
-      &:focus {
-        border-right: 2px solid RGB(228, 36, 249);
+        &:hover,
+        &:focus {
+          border-right: 2px solid RGB(228, 36, 249);
+        }
       }
     }
   }

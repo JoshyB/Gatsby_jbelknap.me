@@ -9,15 +9,15 @@
   },
   {
     "title": "Overwritten TV (OWTV)",
-    "websiteURL": "",
+    "websiteURL": "https://owtv.herokuapp.com/",
     "images": [],
     "description": "OWTV allows users to login, chat and watch Twitch.tv streams that can be changed in real time",
     "tools": "React.js, Express.js, Node.js, SCSS, Socket.io, MongoDB, JSON Web Token (JWT)",
     "about": "This project was made for fun and learning purposes. It was made for a small gaming community that I have been a part of for quite some time. The site allows users to register, login, chat with each other and watch live streams. Admins of the site have the ability to change the live streaming channel in real time. All you have to do is enter the stream url or the streamer's username. The site's user interface was built using React with Express on the backend for handling form validation, authentication, database queries and API requests"
   },
   {
-    "title": "cbusparks",
-    "websiteURL": "cbusparks.fun",
+    "title": "Cbusparks",
+    "websiteURL": "https://cbusparks.fun",
     "images": [],
     "description": "Cbusparks is a full stack web application that allows people to view, add, edit, upload photos and review parks and playgrounds in the Columbus, Ohio area",
     "tools": "HTML, JavaScript, SCSS, Node, Express, Pug/Jade, MongoDB",
@@ -25,7 +25,7 @@
   },
   {
     "title": "Homeglow Imaging",
-    "websiteURL": "https://wwwhomeglowimaging.com",
+    "websiteURL": "https://www.homeglowimaging.com",
     "images": [],
     "description": "Website for a local Real Estate Photography company operating in and around the Columbus, Ohio area.",
     "tools": "Javascript, HTML, Bulma(CSS Framework), PHP",
