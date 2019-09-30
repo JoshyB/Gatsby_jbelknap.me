@@ -11,7 +11,7 @@ import linkSVG from "../images/link-symbol.svg"
 const ProjectWrapper = styled.section`
   width: 100%;
   padding: 20px;
-  margin: 50px auto;
+  margin: 0 auto;
 
   h2 {
     font-size: 3em;
@@ -37,7 +37,7 @@ const ProjectWrapper = styled.section`
   .project_tile {
     border: 1px solid #fff;
     background-color: var(--main-background-color);
-    padding: 40px;
+    padding: 30px;
     cursor: pointer;
     height: 300px;
     display: grid;
@@ -55,7 +55,7 @@ const ProjectWrapper = styled.section`
       font-size: 1.2em;
     }
 
-    .link_button {
+    a {
       display: block;
       cursor: pointer;
       width: min-content;
@@ -67,10 +67,6 @@ const ProjectWrapper = styled.section`
 
       &:hover {
         background-color: rgb(191, 29, 209);
-      }
-
-      a {
-        font-size: 1.4em;
       }
     }
 
@@ -103,13 +99,11 @@ const Projects = () => {
               <div className="project_tile" key={index}>
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
-                <div className="link_button">
-                  {project.websiteURL ? (
-                    <a href={project.websiteURL}>
-                      <img src={linkSVG} alt="chain link" />
-                    </a>
-                  ) : null}
-                </div>
+                {project.websiteURL ? (
+                  <a href={project.websiteURL}>
+                    <img src={linkSVG} alt="chain link" />
+                  </a>
+                ) : null}
               </div>
             ))}
           </div>
