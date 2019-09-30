@@ -5,22 +5,26 @@ import styled from "styled-components"
 //bringing in media queries from an extrapolated file
 import { device } from "../utils/breakpoints"
 
+//images used in header
 import portrait from "../images/JoshyB.jpg"
+import octocat from "../images/github_icon.svg"
+import email from "../images/mail_icon.svg"
 
 import Nav from "./nav"
 
 const HeroWrap = styled.header`
-  padding: 20px;
+  padding: 30px;
   width: 100%;
+  display: grid;
+  grid-template-rows: auto 100px;
+  justify-items: center;
 
   .introduction {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
+    grid-row: 1;
+    width: 275px;
 
     img {
-      width: 270px;
-      height: 100%;
+      width: 100%;
       margin: 0 auto;
     }
 
@@ -41,13 +45,49 @@ const HeroWrap = styled.header`
     }
   }
 
+  .contact {
+    grid-row: 2;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+
+    a {
+      height: 35px;
+      margin: 15px;
+      transition: all 200ms ease-in-out;
+
+      &:hover {
+        transform: scale(1.3);
+      }
+      img {
+        height: 100%;
+      }
+    }
+  }
+
   @media ${device.tablet} {
+    grid-template-columns: 75px 1fr auto;
+    grid-template-rows: auto;
+
     .introduction {
-      flex-direction: row;
-      max-width: 768px;
+      grid-column: 2;
+      display: flex;
+      max-width: 650px;
+      margin-right: auto;
+
       img {
         width: 320px;
       }
+
+      .header_text {
+        margin-left: 30px;
+      }
+    }
+
+    .contact {
+      grid-column: 1;
+      grid-row: 1;
+      flex-direction: column;
     }
   }
 `
@@ -67,6 +107,14 @@ const Header = ({ siteTitle }) => (
           </a>{" "}
         </p>
       </div>
+    </div>
+    <div className="contact">
+      <a href="https://www.github.com/joshyb">
+        <img src={octocat} alt="The Octocat" />
+      </a>
+      <a href="mailto:seejoshcode@gmail.com">
+        <img src={email} alt="envelope icon" />
+      </a>
     </div>
   </HeroWrap>
 )
