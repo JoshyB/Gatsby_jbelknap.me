@@ -25,6 +25,7 @@ const HeroWrap = styled.header`
 
     img {
       width: 100%;
+      height: 100%;
       margin: 0 auto;
     }
 
@@ -66,7 +67,7 @@ const HeroWrap = styled.header`
   }
 
   @media ${device.tablet} {
-    grid-template-columns: 75px 1fr auto;
+    grid-template-columns: 100px 1fr;
     grid-template-rows: auto;
 
     .introduction {
