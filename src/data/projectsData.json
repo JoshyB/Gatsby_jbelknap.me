@@ -1,6 +1,7 @@
 [
   {
     "title": "Rebecca Collins Therapy",
+    "slug": "rcollinstherapy",
     "websiteURL": "https://www.rcollinstherapy.com",
     "images": [],
     "description": "A website for a Mental Health and Sex Therapist in Columbus, Ohio",
@@ -9,6 +10,7 @@
   },
   {
     "title": "Cbusparks",
+    "slug": "cbusparks",
     "websiteURL": "https://cbusparks.fun",
     "images": [],
     "description": "Cbusparks is a full stack web application that allows people to view, add, edit, upload photos and review parks and playgrounds in the Columbus, Ohio area",
@@ -17,6 +19,7 @@
   },
   {
     "title": "Homeglow Imaging",
+    "slug": "homeglow_imaging",
     "websiteURL": "https://www.homeglowimaging.com",
     "images": [],
     "description": "Website for a local Real Estate Photography company operating in and around the Columbus, Ohio area.",
@@ -25,6 +28,7 @@
   },
   {
     "title": "GoodboiCo",
+    "slug": "goodboico",
     "websiteURL": "https://goodboico.netlify.com/",
     "images": [],
     "description": "This website was done as design and layout practice using CSS Grid",
@@ -33,6 +37,7 @@
   },
   {
     "title": "Overwritten TV (OWTV)",
+    "slug": "owtv",
     "websiteURL": "https://owtv.herokuapp.com/",
     "images": [],
     "description": "OWTV allows users to login, chat and watch Twitch.tv streams that can be changed in real time",
@@ -41,6 +46,7 @@
   },
   {
     "title": "Baltimore Retirement Community",
+    "slug": "baltimore_retirement_community",
     "websiteURL": "https://baltimoreretirement.netlify.com/",
     "images": [],
     "description": "One page PPC site for a retirement community",
@@ -49,6 +55,7 @@
   },
   {
     "title": "Stubblefield Leadership",
+    "slug": "stubblefield_leadership",
     "websiteURL": "https://stubblefieldleadership.com/",
     "images": [],
     "description": "Stubblefield Leadership was built for Dr. John Stubblefield, an Educator, Coach, Mentor and Public Speaker who lives in North Carolina.",

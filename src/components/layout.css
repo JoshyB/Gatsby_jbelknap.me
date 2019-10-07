@@ -48,3 +48,14 @@ h6 {
   font-family: "Righteous", cursive;
   color: var(--primary-text);
 }
+
+h1 {
+  letter-spacing: 3px;
+  font-size: 4.5em;
+  text-shadow: 5px 5px var(--text-shadow-primary),
+    -3px -3px var(--text-shadow-secondary);
+}
+
+p {
+  font-size: 1.25em;
+}

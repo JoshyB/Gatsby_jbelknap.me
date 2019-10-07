@@ -1,5 +1,5 @@
 import React, { useLayoutEffect } from "react"
-import { StaticQuery, graphql, link } from "gatsby"
+import { StaticQuery, graphql, Link } from "gatsby"
 import styled from "styled-components"
 
 //bringing in media queries from an extrapolated file
@@ -38,8 +38,7 @@ const ProjectWrapper = styled.section`
     border: 1px solid #fff;
     background-color: var(--main-background-color);
     padding: 30px;
-    cursor: pointer;
-    height: 300px;
+    min-height: 300px;
     display: grid;
     grid-template-rows: auto 1fr auto;
 
@@ -85,6 +84,7 @@ const Projects = () => {
           query projectData {
             allProjectsDataJson {
               nodes {
+                slug
                 description
                 title
                 tools
@@ -99,10 +99,10 @@ const Projects = () => {
               <div className="project_tile" key={index}>
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
-                {project.websiteURL ? (
-                  <a href={project.websiteURL}>
-                    <img src={linkSVG} alt="chain link" />
-                  </a>
+                {project.slug ? (
+                  <Link to={`/${project.slug}`}>
+                    <img src={linkSVG} />
+                  </Link>
                 ) : null}
               </div>
             ))}

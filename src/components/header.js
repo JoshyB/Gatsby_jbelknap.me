@@ -7,10 +7,10 @@ import { device } from "../utils/breakpoints"
 
 //images used in header
 import portrait from "../images/JoshyB.jpg"
-import octocat from "../images/github_icon.svg"
-import email from "../images/mail_icon.svg"
 
+//components
 import Nav from "./nav"
+import Contact from "./contact"
 
 const HeroWrap = styled.header`
   padding: 30px;
@@ -46,26 +46,6 @@ const HeroWrap = styled.header`
     }
   }
 
-  .contact {
-    grid-row: 2;
-    display: flex;
-    justify-items: center;
-    align-items: center;
-
-    a {
-      height: 35px;
-      margin: 15px;
-      transition: all 200ms ease-in-out;
-
-      &:hover {
-        transform: scale(1.3);
-      }
-      img {
-        height: 100%;
-      }
-    }
-  }
-
   @media ${device.tablet} {
     grid-template-columns: 100px 1fr;
     grid-template-rows: auto;
@@ -83,12 +63,6 @@ const HeroWrap = styled.header`
       .header_text {
         margin-left: 30px;
       }
-    }
-
-    .contact {
-      grid-column: 1;
-      grid-row: 1;
-      flex-direction: column;
     }
   }
 `
@@ -109,14 +83,7 @@ const Header = ({ siteTitle }) => (
         </p>
       </div>
     </div>
-    <div className="contact">
-      <a href="https://www.github.com/joshyb">
-        <img src={octocat} alt="The Octocat" />
-      </a>
-      <a href="mailto:seejoshcode@gmail.com">
-        <img src={email} alt="envelope icon" />
-      </a>
-    </div>
+    <Contact />
   </HeroWrap>
 )
 
