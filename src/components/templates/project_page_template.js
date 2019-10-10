@@ -17,7 +17,7 @@ const ProjectPageWrapper = styled.section`
   padding: 30px;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(4, auto);
+  grid-template-rows: repeat(3, auto);
 
   .project_nav {
     display: flex;
@@ -46,12 +46,33 @@ const ProjectPageWrapper = styled.section`
     }
   }
 
-  .project_images {
-    display: flex;
-    height: 500px;
-    img {
+  .project_body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 750px auto;
+    width: 90%;
+    justify-self: center;
+    grid-gap: 20px;
+
+    .desktop_image {
+      grid-row: 1;
+      grid-column: 1 / 2;
       height: 100%;
-      margin: 5px;
+      justify-self: center;
+    }
+
+    .mobile_image {
+      grid-row: 1;
+      grid-column: 2;
+      width: 300px;
+      justify-self: center;
+    }
+
+    .project_text {
+      grid-row: 2;
+      grid-column: 1 / 2;
+      width: 50em;
+      justify-self: center;
     }
   }
 
@@ -78,12 +99,14 @@ export default ({ data }) => {
           <img src={externalLink} />
         </a>
       </div>
-      <div className="project_images">
-        <img src={rcollins} alt="" />
-        <img src={rcollinsMobile} alt="" />
+      <div className="project_body">
+        <img className="desktop_image" src={rcollins} />
+        <img className="mobile_image" src={rcollinsMobile} />
+        <div className="project_text">
+          <p>{project.description}</p>
+          <p>{project.about}</p>
+        </div>
       </div>
-      <p>{project.description}</p>
-      <p>{project.about}</p>
     </ProjectPageWrapper>
   )
 }
