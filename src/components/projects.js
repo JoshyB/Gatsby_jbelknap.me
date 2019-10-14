@@ -44,7 +44,7 @@ const ProjectWrapper = styled.section`
 
     &:hover {
       transform: scale(1.1);
-      transition: all 450ms ease-in-out;
+      transition: transform 450ms ease-in-out;
     }
 
     h3 {
@@ -57,15 +57,15 @@ const ProjectWrapper = styled.section`
     a {
       display: block;
       cursor: pointer;
-      width: min-content;
-      background-color: var(--text-shadow-secondary);
-      padding: 5px 30px;
-      border-radius: 0.2em;
-      margin-top: auto;
+      padding: 5px 10px;
+      margin-left: auto;
       bottom: 20px;
+      font-size: 1.45em;
+      border-bottom: 2px solid #fff;
 
       &:hover {
-        background-color: rgb(191, 29, 209);
+        color: var(--text-shadow-secondary);
+        border-bottom: 2px solid var(--text-shadow-secondary);
       }
     }
 
@@ -100,9 +100,7 @@ const Projects = () => {
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
                 {project.slug ? (
-                  <Link to={`/${project.slug}`}>
-                    <img src={linkSVG} />
-                  </Link>
+                  <Link to={`/${project.slug}`}>Read More</Link>
                 ) : null}
               </div>
             ))}

@@ -3,21 +3,20 @@ import { graphql, Link } from "gatsby"
 import styled from "styled-components"
 
 //components
-import Contact from "../contact"
+import Contact from "../Contact"
+import ImageGrid from "../ImageGrid"
 
 //images
 import externalLink from "../../images/external_link_icon.svg"
-import rcollins from "../../images/rcollins/rcollins_home.png"
-import rcollinsMobile from "../../images/rcollins/rcollins_home_mobile.png"
 
 //media query breakpoints
 import { device } from "../../utils/breakpoints"
 
 const ProjectPageWrapper = styled.section`
-  padding: 30px;
+  padding: 20px;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, auto);
+  grid-template-rows: repeat(4, auto);
 
   .project_nav {
     display: flex;
@@ -35,8 +34,9 @@ const ProjectPageWrapper = styled.section`
 
     a {
       margin-left: 20px;
+
       img {
-        transition: all 250ms ease-in-out;
+        transition: transform 250ms ease-in-out;
         height: 35px;
 
         &:hover {
@@ -48,32 +48,10 @@ const ProjectPageWrapper = styled.section`
 
   .project_body {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 750px auto;
+    grid-template-columns: 1fr;
     width: 90%;
     justify-self: center;
     grid-gap: 20px;
-
-    .desktop_image {
-      grid-row: 1;
-      grid-column: 1 / 2;
-      height: 100%;
-      justify-self: center;
-    }
-
-    .mobile_image {
-      grid-row: 1;
-      grid-column: 2;
-      width: 300px;
-      justify-self: center;
-    }
-
-    .project_text {
-      grid-row: 2;
-      grid-column: 1 / 2;
-      width: 50em;
-      justify-self: center;
-    }
   }
 
   @media ${device.tablet} {
@@ -86,7 +64,13 @@ const ProjectPageWrapper = styled.section`
 `
 
 export default ({ data }) => {
-  const project = data.allProjectsDataJson.edges[0].node
+  const {
+    title,
+    websiteURL,
+    about,
+    images,
+    tools,
+  } = data.allProjectsDataJson.edges[0].node
   return (
     <ProjectPageWrapper>
       <div className="project_nav">
@@ -94,18 +78,18 @@ export default ({ data }) => {
         <Link to="/">Home</Link>
       </div>
       <div className="project_title">
-        <h1>{project.title}</h1>
-        <a href={project.websiteURL}>
+        <h1>{title}</h1>
+        <a href={websiteURL}>
           <img src={externalLink} />
         </a>
       </div>
+      {images ? <ImageGrid images={images} /> : null}
       <div className="project_body">
-        <img className="desktop_image" src={rcollins} />
-        <img className="mobile_image" src={rcollinsMobile} />
         <div className="project_text">
-          <p>{project.description}</p>
-          <p>{project.about}</p>
+          <p>{about}</p>
         </div>
+        <h2>Stack</h2>
+        <p>{tools}</p>
       </div>
     </ProjectPageWrapper>
   )
@@ -118,6 +102,9 @@ export const query = graphql`
         node {
           slug
           title
+          images {
+            publicURL
+          }
           tools
           description
           about
