@@ -4,7 +4,6 @@ import styled from "styled-components"
 
 //components
 import Contact from "../Contact"
-import ImageGrid from "../ImageGrid"
 
 //images
 import externalLink from "../../images/external_link_icon.svg"
@@ -52,12 +51,38 @@ const ProjectPageWrapper = styled.section`
     width: 90%;
     justify-self: center;
     grid-gap: 20px;
+
+    .project_image {
+      max-width: 535px;
+      justify-self: center;
+      img {
+        width: 100%;
+      }
+    }
   }
 
   @media ${device.tablet} {
     .project_title {
       h1 {
         font-size: 4.5em;
+      }
+    }
+  }
+
+  @media ${device.laptop} {
+    .project_body {
+      grid-template-columns: 1fr 1fr;
+      grid-auto-rows: 600px;
+      margin-top: 50px;
+
+      .project_text {
+        grid-column: 1;
+        grid-row: 1;
+      }
+
+      .project_image {
+        max-height: 600px;
+        grid-column: 2;
       }
     }
   }
@@ -71,6 +96,11 @@ export default ({ data }) => {
     images,
     tools,
   } = data.allProjectsDataJson.edges[0].node
+
+  //get public url for the project image out of the query
+  const projectImage = images.publicURL
+
+  console.log(images.publicURL)
   return (
     <ProjectPageWrapper>
       <div className="project_nav">
@@ -83,13 +113,16 @@ export default ({ data }) => {
           <img src={externalLink} />
         </a>
       </div>
-      {images ? <ImageGrid images={images} /> : null}
       <div className="project_body">
+        <div className="project_image">
+          {projectImage && <img src={projectImage} />}
+        </div>
         <div className="project_text">
+          <h2>Stack</h2>
+          <p>{tools}</p>
+          <h2>About the Project</h2>
           <p>{about}</p>
         </div>
-        <h2>Stack</h2>
-        <p>{tools}</p>
       </div>
     </ProjectPageWrapper>
   )
