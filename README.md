@@ -27,4 +27,4 @@ or
 yarn develop
 ```
 
-Navigate to [localhost:8000](localhost:8000) and you should see the site up and running in your browser.
+Navigate to [localhost:8000](http://localhost:8000) and you should see the site up and running in your browser.
