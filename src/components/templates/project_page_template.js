@@ -109,9 +109,11 @@ export default ({ data }) => {
       </div>
       <div className="project_title">
         <h1>{title}</h1>
-        <a href={websiteURL}>
-          <img src={externalLink} />
-        </a>
+        {websiteURL && (
+          <a href={websiteURL}>
+            <img src={externalLink} />
+          </a>
+        )}
       </div>
       <div className="project_body">
         <div className="project_image">
