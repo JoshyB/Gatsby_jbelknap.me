@@ -54,23 +54,28 @@ const ProjectWrapper = styled.section`
       font-size: 1.2em;
     }
 
-    a {
-      display: block;
-      cursor: pointer;
-      padding: 5px 10px;
-      margin-left: auto;
-      bottom: 20px;
-      font-size: 1.45em;
-      border-bottom: 2px solid #fff;
+    .project_readMore {
+      width: min-content;
+      justify-self: end;
+      a {
+        grid-row: 3;
+        display: block;
+        cursor: pointer;
+        padding: 5px 10px;
+        bottom: 20px;
+        font-size: 1.45em;
+        border-bottom: 2px solid #fff;
+        white-space: nowrap;
 
-      &:hover {
-        color: var(--text-shadow-secondary);
-        border-bottom: 2px solid var(--text-shadow-secondary);
+        &:hover {
+          color: var(--text-shadow-secondary);
+          border-bottom: 2px solid var(--text-shadow-secondary);
+        }
       }
     }
 
     @media ${device.laptop} {
-      height: 370px;
+      max-height: 400px;
     }
   }
 `
@@ -99,9 +104,11 @@ const Projects = () => {
               <div className="project_tile" key={index}>
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
-                {project.slug ? (
-                  <Link to={`/${project.slug}`}>Read More</Link>
-                ) : null}
+                <div className="project_readMore">
+                  {project.slug && (
+                    <Link to={`/${project.slug}`}>Read More</Link>
+                  )}
+                </div>
               </div>
             ))}
           </div>

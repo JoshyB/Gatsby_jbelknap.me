@@ -13,25 +13,27 @@ import Nav from "./nav"
 import Contact from "./contact"
 
 const HeroWrap = styled.header`
-  padding: 30px;
+  padding: 30px 0;
   width: 100%;
   display: grid;
-  grid-template-rows: auto 100px;
+  grid-template-rows: auto;
+  grid-auto-columns: 1fr;
   justify-items: center;
 
   .introduction {
-    grid-row: 1;
-    width: 275px;
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    max-width: 300px;
 
     img {
+      grid-row: 1;
       width: 100%;
-      height: 100%;
       margin: 0 auto;
     }
 
     .header_text {
-      width: 270px;
-      margin: 20px auto;
+      display: grid;
+
       h1 {
         letter-spacing: 3px;
         font-size: 4.5em;
@@ -47,21 +49,27 @@ const HeroWrap = styled.header`
   }
 
   @media ${device.tablet} {
-    grid-template-columns: 100px 1fr;
+    grid-template-columns: 100px 2fr 1fr;
     grid-template-rows: auto;
 
     .introduction {
       grid-column: 2;
       display: flex;
-      max-width: 650px;
-      margin-right: auto;
+      justify-self: start;
+      max-width: 100%;
 
       img {
-        width: 320px;
+        height: 350px;
+        width: auto;
+        margin-right: 20px;
       }
 
       .header_text {
-        margin-left: 30px;
+        width: 350px;
+
+        h1 {
+          margin: 0;
+        }
       }
     }
   }
@@ -69,6 +77,7 @@ const HeroWrap = styled.header`
 
 const Header = ({ siteTitle }) => (
   <HeroWrap>
+    <Contact />
     <div className="introduction">
       <img src={portrait} alt="" />
       <div className="header_text">
@@ -83,7 +92,6 @@ const Header = ({ siteTitle }) => (
         </p>
       </div>
     </div>
-    <Contact />
   </HeroWrap>
 )
 
