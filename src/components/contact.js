@@ -10,26 +10,32 @@ import email from "../images/mail_icon.svg"
 const ContactWrap = styled.div`
   grid-row: 2;
   display: flex;
-  justify-items: center;
+  justify-content: center;
   align-items: center;
 
   a {
-    height: 35px;
-    margin: 15px;
-    transition: all 200ms ease-in-out;
+    width: 35px;
+    margin: 25px;
+    transition: transform 200ms ease-in-out;
 
     &:hover {
       transform: scale(1.3);
     }
     img {
-      height: 100%;
+      width: 100%;
     }
   }
 
   @media ${device.tablet} {
     grid-column: 1;
-    grid-row: 1;
     flex-direction: column;
+    grid-row: 1;
+    justify-content: flex-start;
+
+    a {
+      img {
+      }
+    }
   }
 `
 const Contact = () => {
