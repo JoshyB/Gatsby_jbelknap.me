@@ -119,14 +119,11 @@ export default ({ data }) => {
             <img src={externalLink} />
           </a>
         )}
-<<<<<<< HEAD
-=======
         {githubURL && (
           <a href={githubURL}>
             <p>Github</p>
           </a>
         )}
->>>>>>> DEV/projectpages
       </div>
       <div className="project_body">
         <div className="project_image">
