@@ -7,10 +7,11 @@ import { device } from "../utils/breakpoints"
 
 //svg image
 import linkSVG from "../images/link-symbol.svg"
+import projectIcon from "../images/project_icon.svg"
 
 const ProjectWrapper = styled.section`
   width: 100%;
-  padding: 20px;
+  padding: 30px;
   margin: 0 auto;
 
   h2 {

@@ -33,6 +33,7 @@ const ProjectPageWrapper = styled.section`
 
     a {
       margin-left: 20px;
+      display: inline-block;
 
       img {
         transition: transform 250ms ease-in-out;
@@ -53,8 +54,9 @@ const ProjectPageWrapper = styled.section`
     grid-gap: 20px;
 
     .project_image {
-      max-width: 535px;
+      max-width: 550px;
       justify-self: center;
+
       img {
         width: 100%;
       }
@@ -72,12 +74,16 @@ const ProjectPageWrapper = styled.section`
   @media ${device.laptop} {
     .project_body {
       grid-template-columns: 1fr 1fr;
-      grid-auto-rows: 600px;
+      grid-auto-rows: auto;
       margin-top: 50px;
 
       .project_text {
         grid-column: 1;
         grid-row: 1;
+
+        p {
+          margin-bottom: 35px;
+        }
       }
 
       .project_image {
@@ -92,15 +98,14 @@ export default ({ data }) => {
   const {
     title,
     websiteURL,
+    githubURL,
     about,
     images,
     tools,
   } = data.allProjectsDataJson.edges[0].node
 
-  //get public url for the project image out of the query
   const projectImage = images.publicURL
 
-  console.log(images.publicURL)
   return (
     <ProjectPageWrapper>
       <div className="project_nav">
@@ -109,9 +114,16 @@ export default ({ data }) => {
       </div>
       <div className="project_title">
         <h1>{title}</h1>
-        <a href={websiteURL}>
-          <img src={externalLink} />
-        </a>
+        {websiteURL && (
+          <a href={websiteURL}>
+            <img src={externalLink} />
+          </a>
+        )}
+        {githubURL && (
+          <a href={githubURL}>
+            <p>Github</p>
+          </a>
+        )}
       </div>
       <div className="project_body">
         <div className="project_image">
@@ -120,7 +132,7 @@ export default ({ data }) => {
         <div className="project_text">
           <h2>Stack</h2>
           <p>{tools}</p>
-          <h2>About the Project</h2>
+          <h2>The Project</h2>
           <p>{about}</p>
         </div>
       </div>
@@ -142,6 +154,7 @@ export const query = graphql`
           description
           about
           websiteURL
+          githubURL
         }
       }
     }

@@ -3,7 +3,7 @@
     "title": "Rebecca Collins Therapy",
     "slug": "rcollinstherapy",
     "websiteURL": "https://www.rcollinstherapy.com",
-    "images": "../images/rcollins/rcollins_screencaps.png",
+    "images": "../images/rcollins/rcollins.png",
     "description": "A website for a Mental Health and Sex Therapist in Columbus, Ohio",
     "tools": "HTML, JavaScript, CSS, Node, Express, Pug/Jade",
     "about": "I built this website for a Sex Therapist here in Columbus, Ohio. She wanted a site where visitors could learn about how sex therapy works and what to expect from it. As well as an easy way for current and potential clients to get in contact with her and download admission and billing forms, view her rates and types of insurance she accepts. The client expressed interest in adding other features to the site at a later date, such as a blog, and possibly a payment option for those who are paying out of pocket for services. I chose Node, and Express with the idea that it would be easier to build and incorporate those features at a later time."
@@ -12,16 +12,35 @@
     "title": "Cbusparks",
     "slug": "cbusparks",
     "websiteURL": "https://cbusparks.fun",
-    "images": "../images/cbusparks/cbusparks_screencaps.png",
+    "githubURL": "https://github.com/JoshyB/CbusParks",
+    "images": "../images/cbusparks/cbusparks.png",
     "description": "Cbusparks is a full stack web application that allows people to view, add, edit, upload photos and review parks and playgrounds in the Columbus, Ohio area",
     "tools": "HTML, JavaScript, SCSS, Node, Express, Pug/Jade, MongoDB",
-    "about": "cbusparks.fun is a personal project of mine. As the father of a toddler, we visit a decent amount of parks and playgrounds on a weekly basis. And while the Columbus Parks and Recreation website is a great source of information, I decided that I would like to have just a little more information. I built it with the idea that people visiting the site could register, login, add, edit parks and upload photos of the parks they have visited as well as leave comments about parks in the database that other people have added. While adding a park, users can select various features the park may have, such as if there are bathrooms or not, is it shady? is there a basketball court? or a picnic area? You can find all this information on cbusparks.fun."
+    "about": "Cbusparks.fun is a personal project of mine. As the father of a toddler, we visit a decent amount of parks and playgrounds on a weekly basis. And while the Columbus Parks and Recreation website is a great source of information, I decided that I would like to have just a little more information. I built it with the idea that people visiting the site could register, login, add, edit parks and upload photos of the parks they have visited as well as leave comments about parks in the database that other people have added. While adding a park, users can select various features the park may have, such as if there are bathrooms or not, is it shady? is there a basketball court? or a picnic area? You can find all this information on cbusparks.fun."
+  },
+  {
+    "title": "Stubblefield Leadership",
+    "slug": "stubblefield_leadership",
+    "websiteURL": "https://stubblefieldleadership.com/",
+    "images": "../images/stubblefield/stubblefield.png",
+    "description": "Stubblefield Leadership was built for Dr. John Stubblefield, an Educator, Coach, Mentor and Public Speaker who lives in North Carolina.",
+    "tools": "Wordpress, CSS",
+    "about": "Dr. Stubblefield needed a website for "
+  },
+  {
+    "title": "Overwritten TV (OWTV)",
+    "slug": "owtv",
+    "websiteURL": "https://owtv.herokuapp.com/",
+    "images": "../images/owtv/owtv.png",
+    "description": "OWTV allows users to login, chat and watch Twitch.tv streams that can be changed in real time",
+    "tools": "React.js, Express.js, Node.js, SCSS, Socket.io, MongoDB, JSON Web Token (JWT)",
+    "about": "This project was made for fun and learning purposes. It was made for a small gaming community that I have been a part of for quite some time. The site allows users to register, login, chat with each other and watch live streams. Admins of the site have the ability to change the live streaming channel in real time. All you have to do is enter the stream url or the streamer's username. The site's user interface was built using React with Express on the backend for handling form validation, authentication, database queries and API requests"
   },
   {
     "title": "Homeglow Imaging",
     "slug": "homeglow_imaging",
     "websiteURL": "https://www.homeglowimaging.com",
-    "images": "../images/homeglow/homeglowimaging_screencaps.png",
+    "images": "../images/homeglowimaging/homeglowimaging.png",
     "description": "Website for a local Real Estate Photography company operating in and around the Columbus, Ohio area.",
     "tools": "Javascript, HTML, Bulma(CSS Framework), PHP",
     "about": "Homeglow Imaging needed a website for marketing and a way for customers to easily get into contact with them. The client had a tight budget and timeframe so I reached for the Bulma CSS framework to quickly prototype and build out a working website. PHP was used to take care of the scheduling and contact forms."
@@ -30,36 +49,19 @@
     "title": "GoodboiCo",
     "slug": "goodboico",
     "websiteURL": "https://goodboico.netlify.com/",
-    "images": "../images/goodboico/goodboico_screencaps.png",
+    "images": "../images/goodboico/goodboico.png",
     "description": "This website was done as design and layout practice using CSS Grid",
-    "tools": "HTML, CSS with Grid,",
-    "about": "I made this website to practice my design skills and learn more about how CSS Grid works and I'm happy with the result."
+    "tools": "HTML, CSS, JavaScript",
+    "about": "I made this simple one page website to practice my design skills and learn more about how CSS Grid works. I wanted the information on the page to be informative and easy to consume for users and I'm pretty happy with the result."
   },
-  {
-    "title": "Overwritten TV (OWTV)",
-    "slug": "owtv",
-    "websiteURL": "https://owtv.herokuapp.com/",
-    "images": "../images/owtv/owtv_screencaps.png",
-    "description": "OWTV allows users to login, chat and watch Twitch.tv streams that can be changed in real time",
-    "tools": "React.js, Express.js, Node.js, SCSS, Socket.io, MongoDB, JSON Web Token (JWT)",
-    "about": "This project was made for fun and learning purposes. It was made for a small gaming community that I have been a part of for quite some time. The site allows users to register, login, chat with each other and watch live streams. Admins of the site have the ability to change the live streaming channel in real time. All you have to do is enter the stream url or the streamer's username. The site's user interface was built using React with Express on the backend for handling form validation, authentication, database queries and API requests"
-  },
+
   {
     "title": "Baltimore Retirement Community",
     "slug": "baltimore_retirement_community",
     "websiteURL": "https://baltimoreretirement.netlify.com/",
-    "images": "../images/baltimoreretirement/baltimore_screencaps.png",
+    "images": "../images/baltimore/baltimore.png",
     "description": "One page PPC site for a retirement community",
     "tools": "HTML, CSS, JavaScript",
-    "about": ""
-  },
-  {
-    "title": "Stubblefield Leadership",
-    "slug": "stubblefield_leadership",
-    "websiteURL": "https://stubblefieldleadership.com/",
-    "images": "../images/stubblefield/stubbs_screencaps.png",
-    "description": "Stubblefield Leadership was built for Dr. John Stubblefield, an Educator, Coach, Mentor and Public Speaker who lives in North Carolina.",
-    "tools": "Wordpress, CSS",
-    "about": "Dr. Stubblefield needed a website for "
+    "about": "This is a one page PPC site that was done for a retirement community that wanted to use it for an advertisement campaign. It features large easier to read text, lots of calls to action, a contact form and is of course fully responsive."
   }
 ]
