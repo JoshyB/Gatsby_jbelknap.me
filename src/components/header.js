@@ -43,7 +43,7 @@ const HeroWrap = styled.header`
       }
 
       p {
-        font-size: 1.65em;
+        font-size: 1.25em;
       }
     }
   }
@@ -87,8 +87,10 @@ const Header = ({ siteTitle }) => (
         <p>
           Hello, I'm a Web Developer based in{" "}
           <a href="https://www.google.com/maps/place/Columbus,+OH/@39.9829514,-82.990829,11z/data=!4m2!3m1!1s0x883889c1b990de71:0xe43266f8cfb1b533">
-            Columbus, Ohio
+            Columbus, Ohio.
           </a>{" "}
+          I specialize in designing and building things that live on the
+          internet for fun and profit.
         </p>
       </div>
     </div>

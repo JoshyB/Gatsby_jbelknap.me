@@ -15,7 +15,7 @@ const ContactWrap = styled.div`
 
   a {
     width: 35px;
-    margin: 25px;
+    margin: 10px 25px;
     transition: transform 200ms ease-in-out;
 
     &:hover {
