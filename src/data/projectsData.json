@@ -51,22 +51,8 @@
     "websiteURL": "https://goodboico.netlify.com/",
     "images": "../images/goodboico/goodboico.png",
     "description": "This website was done as design and layout practice using CSS Grid",
-<<<<<<< HEAD
-    "tools": "HTML, CSS",
-    "about": "I made this website to practice my design skills and learn more about how CSS Grid works and I'm happy with the result."
-  },
-  {
-    "title": "Overwritten TV (OWTV)",
-    "slug": "owtv",
-    "websiteURL": "https://owtv.herokuapp.com/",
-    "images": "../images/owtv/owtv_screencaps.png",
-    "description": "OWTV allows users to login, chat and watch Twitch.tv streams that can be changed in real time",
-    "tools": "React.js, Express.js, Node.js, SCSS, Socket.io, MongoDB, JSON Web Token (JWT)",
-    "about": "This project was made for fun and learning purposes. It was made for a small gaming community that I have been a part of for quite some time. The site allows users to register, login, chat with each other and watch live streams. Admins of the site have the ability to change the live streaming channel in real time. All you have to do is enter the stream url or the streamer's username. The site's user interface was built using React with Express on the backend for handling form validation, authentication, database queries and API requests"
-=======
     "tools": "HTML, CSS, JavaScript",
     "about": "I made this simple one page website to practice my design skills and learn more about how CSS Grid works. I wanted the information on the page to be informative and easy to consume for users and I'm pretty happy with the result."
->>>>>>> DEV/projectpages
   },
 
   {
