@@ -1,5 +1,5 @@
-import React, { useLayoutEffect } from "react"
-import { StaticQuery, graphql, Link } from "gatsby"
+import React from "react"
+import { StaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 
 //bringing in media queries from an extrapolated file
@@ -11,7 +11,7 @@ import projectIcon from "../images/project_icon.svg"
 
 const ProjectWrapper = styled.section`
   width: 100%;
-  padding: 30px;
+  padding: 20px;
   margin: 0 auto;
 
   h2 {
@@ -19,18 +19,18 @@ const ProjectWrapper = styled.section`
   }
 
   .allProjects {
+    display: grid;
+    grid-gap: 5px;
+
     @media ${device.tablet} {
-      display: grid;
       grid-template-columns: repeat(2, 1fr);
     }
 
     @media ${device.laptop} {
-      display: grid;
       grid-template-columns: repeat(3, 1fr);
     }
 
     @media ${device.desktop} {
-      display: grid;
       grid-template-columns: repeat(4, 1fr);
     }
   }
@@ -40,43 +40,48 @@ const ProjectWrapper = styled.section`
     background-color: var(--main-background-color);
     padding: 30px;
     min-height: 300px;
+    max-height: 500px;
     display: grid;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: 80px 1fr 80px;
 
     &:hover {
       transform: scale(1.1);
       transition: transform 450ms ease-in-out;
     }
 
-    h3 {
-      font-size: 1.45em;
-    }
-    p {
-      font-size: 1.2em;
-    }
+    .project_tile_header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+      grid-row: 1;
 
-    .project_readMore {
-      width: min-content;
-      justify-self: end;
+      img {
+        width: auto;
+        height: 45px;
+      }
+
       a {
-        grid-row: 3;
-        display: block;
-        cursor: pointer;
-        padding: 5px 10px;
-        bottom: 20px;
-        font-size: 1.45em;
-        border-bottom: 2px solid #fff;
-        white-space: nowrap;
-
-        &:hover {
-          color: var(--text-shadow-secondary);
-          border-bottom: 2px solid var(--text-shadow-secondary);
-        }
+        margin: 0 5px;
       }
     }
 
+    .project_description {
+      grid-row: 2;
+
+      h5 {
+        font-size: 1.4em;
+        margin: 0;
+      }
+    }
+
+    .project_tools {
+      grid-row: 3;
+      font-size: 0.8em;
+      opacity: 0.8;
+    }
+
     @media ${device.laptop} {
-      max-height: 400px;
+      /* max-height: 500px; */
     }
   }
 `
@@ -90,11 +95,11 @@ const Projects = () => {
           query projectData {
             allProjectsDataJson {
               nodes {
-                slug
+                githubURL
+                websiteURL
                 description
                 title
                 tools
-                websiteURL
               }
             }
           }
@@ -103,12 +108,23 @@ const Projects = () => {
           <div className="allProjects">
             {data.allProjectsDataJson.nodes.map((project, index) => (
               <div className="project_tile" key={index}>
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-                <div className="project_readMore">
-                  {project.slug && (
-                    <Link to={`/${project.slug}`}>Read More</Link>
-                  )}
+                <div className="project_tile_header">
+                  {projectIcon && <img src={projectIcon} />}
+                  <div className="project_urls">
+                    {project.githubURL && (
+                      <a href={project.githubURL}>Github</a>
+                    )}
+                    {project.websiteURL && (
+                      <a href={project.websiteURL}>Link</a>
+                    )}
+                  </div>
+                </div>
+                <div className="project_description">
+                  <h5>{project.title}</h5>
+                  <p>{project.description}</p>
+                </div>
+                <div className="project_tools">
+                  <p>{project.tools}</p>
                 </div>
               </div>
             ))}

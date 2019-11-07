@@ -3,6 +3,7 @@
     "title": "Rebecca Collins Therapy",
     "slug": "rcollinstherapy",
     "websiteURL": "https://www.rcollinstherapy.com",
+    "githubURL": "https://github.com/JoshyB/rcollinstherapy.com",
     "images": "../images/rcollins/rcollins.png",
     "description": "A website for a Mental Health and Sex Therapist in Columbus, Ohio",
     "tools": "HTML, JavaScript, CSS, Node, Express, Pug/Jade",
