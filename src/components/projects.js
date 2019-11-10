@@ -1,12 +1,13 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
+import SVGIcon from "./SVGIcons"
 
 //bringing in media queries from an extrapolated file
 import { device } from "../utils/breakpoints"
 
 //svg image
-import linkSVG from "../images/link-symbol.svg"
+import linkSVG from "../images/link.svg"
 import projectIcon from "../images/project_icon.svg"
 
 const ProjectWrapper = styled.section`
@@ -60,8 +61,11 @@ const ProjectWrapper = styled.section`
         height: 45px;
       }
 
-      a {
-        margin: 0 5px;
+      .project_urls {
+        display: flex;
+        a {
+          margin: 0 10px;
+        }
       }
     }
 
@@ -109,13 +113,36 @@ const Projects = () => {
             {data.allProjectsDataJson.nodes.map((project, index) => (
               <div className="project_tile" key={index}>
                 <div className="project_tile_header">
-                  {projectIcon && <img src={projectIcon} />}
+                  {projectIcon && (
+                    <img
+                      src={projectIcon}
+                      alt="Decorative icon of a computer with less than, slash, and greater than symbols on the monitor"
+                    />
+                  )}
                   <div className="project_urls">
                     {project.githubURL && (
-                      <a href={project.githubURL}>Github</a>
+                      <a
+                        href={project.githubURL}
+                        aria-label="link to the specific project repository"
+                      >
+                        <SVGIcon
+                          name="github"
+                          aria-label="Octocat Icon"
+                          width={30}
+                        />
+                      </a>
                     )}
                     {project.websiteURL && (
-                      <a href={project.websiteURL}>Link</a>
+                      <a
+                        href={project.websiteURL}
+                        aria-label="link to project website"
+                      >
+                        <SVGIcon
+                          name="link"
+                          aria-label="External link icon"
+                          width={35}
+                        />
+                      </a>
                     )}
                   </div>
                 </div>

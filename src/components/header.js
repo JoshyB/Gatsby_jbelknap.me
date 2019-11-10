@@ -79,14 +79,17 @@ const Header = ({ siteTitle }) => (
   <HeroWrap>
     <Contact />
     <div className="introduction">
-      <img src={portrait} alt="" />
+      <img src={portrait} alt="Headshot of Joshua Belknap" />
       <div className="header_text">
         <h1>
           Joshua <br /> Belknap
         </h1>
         <p>
           Hello, I'm a Web Developer based in{" "}
-          <a href="https://www.google.com/maps/place/Columbus,+OH/@39.9829514,-82.990829,11z/data=!4m2!3m1!1s0x883889c1b990de71:0xe43266f8cfb1b533">
+          <a
+            href="https://www.google.com/maps/place/Columbus,+OH/@39.9829514,-82.990829,11z/data=!4m2!3m1!1s0x883889c1b990de71:0xe43266f8cfb1b533"
+            aria-label="Google map of Columbus Ohio"
+          >
             Columbus, Ohio.
           </a>{" "}
           I specialize in designing and building things that live on the

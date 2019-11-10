@@ -26,12 +26,13 @@
     "images": "../images/stubblefield/stubblefield.png",
     "description": "Stubblefield Leadership was built for Dr. John Stubblefield, an Educator, Coach, Mentor and Public Speaker who lives in North Carolina.",
     "tools": "Wordpress, CSS",
-    "about": "Dr. Stubblefield needed a website for "
+    "about": ""
   },
   {
     "title": "Overwritten TV (OWTV)",
     "slug": "owtv",
     "websiteURL": "https://owtv.herokuapp.com/",
+    "githubURL": "https://github.com/JoshyB/owtv",
     "images": "../images/owtv/owtv.png",
     "description": "OWTV allows users to login, chat and watch Twitch.tv streams that can be changed in real time",
     "tools": "React.js, Express.js, Node.js, SCSS, Socket.io, MongoDB, JSON Web Token (JWT)",
@@ -50,6 +51,7 @@
     "title": "GoodboiCo",
     "slug": "goodboico",
     "websiteURL": "https://goodboico.netlify.com/",
+    "githubURL": "https://github.com/JoshyB/goodboico",
     "images": "../images/goodboico/goodboico.png",
     "description": "This website was done as design and layout practice using CSS Grid",
     "tools": "HTML, CSS, JavaScript",

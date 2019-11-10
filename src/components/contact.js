@@ -41,10 +41,13 @@ const ContactWrap = styled.div`
 const Contact = () => {
   return (
     <ContactWrap>
-      <a href="https://www.github.com/joshyb">
+      <a href="https://www.github.com/joshyb" aria-label="Joshua's github Repo">
         <img src={octocat} alt="The Octocat" />
       </a>
-      <a href="mailto:seejoshcode@gmail.com">
+      <a
+        href="mailto:seejoshcode@gmail.com"
+        arai-label="mailto link to Joshua's inbox"
+      >
         <img src={email} alt="envelope icon" />
       </a>
     </ContactWrap>
