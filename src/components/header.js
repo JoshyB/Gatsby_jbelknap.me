@@ -1,5 +1,6 @@
 import PropTypes from "prop-types"
 import React from "react"
+import { Link } from "gatsby"
 import styled from "styled-components"
 
 //bringing in media queries from an extrapolated file
@@ -11,9 +12,9 @@ import portrait from "../images/JoshyB.jpg"
 //components
 import Nav from "./nav"
 import Contact from "./contact"
+import AboutMe from "./introduction"
 
 const HeroWrap = styled.header`
-  padding: 30px 0;
   width: 100%;
   display: grid;
   grid-template-rows: auto;
@@ -23,7 +24,7 @@ const HeroWrap = styled.header`
   .introduction {
     display: grid;
     grid-template-rows: repeat(3, auto);
-    max-width: 300px;
+    max-width: 375px;
 
     img {
       grid-row: 1;
@@ -77,8 +78,8 @@ const HeroWrap = styled.header`
 
 const Header = ({ siteTitle }) => (
   <HeroWrap>
-    <Contact />
-    <div className="introduction">
+    <AboutMe />
+    {/* <div className="introduction">
       <img src={portrait} alt="Headshot of Joshua Belknap" />
       <div className="header_text">
         <h1>
@@ -95,8 +96,11 @@ const Header = ({ siteTitle }) => (
           I specialize in designing and building things that live on the
           internet for fun and profit.
         </p>
+        <Link to="/about" arai-label="About">
+          More about me.
+        </Link>
       </div>
-    </div>
+    </div> */}
   </HeroWrap>
 )
 

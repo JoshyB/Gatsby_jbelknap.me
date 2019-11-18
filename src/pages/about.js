@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import styled from "styled-components"
 
 //bringing in media queries from an extrapolated file
@@ -8,8 +7,6 @@ import { device } from "../utils/breakpoints"
 //compontents
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Introduction from "../components/introduction"
-import Projects from "../components/projects"
 
 const ContentWrapper = styled.section`
   width: 100%;
@@ -21,15 +18,13 @@ const ContentWrapper = styled.section`
   }
 `
 
-const IndexPage = () => (
+const AboutPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="About" />
     <ContentWrapper>
-      <Introduction />
-      {/* <Header /> */}
-      <Projects />
+      <h1>Joshua Belknap</h1>
     </ContentWrapper>
   </Layout>
 )
 
-export default IndexPage
+export default AboutPage
