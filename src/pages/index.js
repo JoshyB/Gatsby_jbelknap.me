@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import styled from "styled-components"
 
 //bringing in media queries from an extrapolated file
@@ -26,7 +25,6 @@ const IndexPage = () => (
     <SEO title="Home" />
     <ContentWrapper>
       <Introduction />
-      {/* <Header /> */}
       <Projects />
     </ContentWrapper>
   </Layout>

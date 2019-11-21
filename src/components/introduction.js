@@ -1,34 +1,15 @@
 import React, { Component } from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import posed, { PoseGroup } from "react-pose"
 
 //bringing in media queries from an extrapolated file
 import { device } from "../utils/breakpoints"
 
-//animation props
-const EnterAnimation = {
-  enter: {
-    y: 0,
-    opacity: 1,
-    delay: 300,
-    transition: {
-      y: { type: "tween", stiffness: 600, damping: 15 },
-      default: { duration: 300 },
-    },
-  },
-  exit: {
-    y: 50,
-    opacity: 0,
-    transition: { duration: 150 },
-  },
-}
-
-const AboutWrapper = styled(posed.header(EnterAnimation))`
+const AboutWrapper = styled.header`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, auto);
-  padding: 100px 25px;
+  padding: 200px 25px 100px 25px;
 
   .introduction {
     grid-row: 2;
@@ -87,55 +68,39 @@ const AboutWrapper = styled(posed.header(EnterAnimation))`
 `
 
 class Introduction extends Component {
-  state = { isVisible: false }
-
-  componentDidMount() {
-    setTimeout(() => {
-      this.setState({
-        isVisible: !this.state.isVisible,
-      })
-    }, 150)
-  }
   render() {
-    const { isVisible } = this.state
-
     return (
-      <PoseGroup>
-        {isVisible && (
-          <AboutWrapper key="body">
-            <div className="introduction">
-              <p className="eminem">Hi, my name is</p>
-              <h1>Joshua Belknap.</h1>
-              <h2 className="secondary_title">
-                I like to build things that live on the web.
-              </h2>
-              <p className="sub_text">
-                I'm a Web Developer based in{" "}
-                <a
-                  href="https://www.google.com/maps/place/Columbus,+OH/@39.9829514,-82.990829,11z/data=!4m2!3m1!1s0x883889c1b990de71:0xe43266f8cfb1b533"
-                  aria-label="Google map of Columbus Ohio"
-                >
-                  Columbus, Ohio.
-                </a>{" "}
-                I specialize in designing and building websites for fun and
-                profit.
-              </p>
-              <div className="contactMe">
-                <a
-                  className="getInTouch__button"
-                  href="mailto:seejoshcode@gmail.com"
-                  arai-label="mailto link to Joshua's inbox"
-                >
-                  Get in Touch
-                </a>
-                <Link to="/about" className="moreAboutMe__button">
-                  About me →
-                </Link>
-              </div>
-            </div>
-          </AboutWrapper>
-        )}
-      </PoseGroup>
+      <AboutWrapper key="body">
+        <div className="introduction">
+          <p className="eminem">Hi, my name is</p>
+          <h1>Joshua Belknap.</h1>
+          <h2 className="secondary_title">
+            I like to build things that live on the web.
+          </h2>
+          <p className="sub_text">
+            I'm a Web Developer based in{" "}
+            <a
+              href="https://www.google.com/maps/place/Columbus,+OH/@39.9829514,-82.990829,11z/data=!4m2!3m1!1s0x883889c1b990de71:0xe43266f8cfb1b533"
+              aria-label="Google map of Columbus Ohio"
+            >
+              Columbus, Ohio.
+            </a>{" "}
+            I specialize in designing and building websites for fun and profit.
+          </p>
+          <div className="contactMe">
+            <a
+              className="getInTouch__button"
+              href="mailto:seejoshcode@gmail.com"
+              arai-label="mailto link to Joshua's inbox"
+            >
+              Get in Touch
+            </a>
+            <Link to="/about" className="moreAboutMe__button">
+              About me →
+            </Link>
+          </div>
+        </div>
+      </AboutWrapper>
     )
   }
 }

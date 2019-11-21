@@ -12,7 +12,7 @@ import portrait from "../images/JoshyB.jpg"
 //components
 import Nav from "./nav"
 import Contact from "./contact"
-import AboutMe from "./introduction"
+import Intro from "./introduction"
 
 const HeroWrap = styled.header`
   width: 100%;
@@ -78,7 +78,7 @@ const HeroWrap = styled.header`
 
 const Header = ({ siteTitle }) => (
   <HeroWrap>
-    <AboutMe />
+    <Introduction />
     {/* <div className="introduction">
       <img src={portrait} alt="Headshot of Joshua Belknap" />
       <div className="header_text">

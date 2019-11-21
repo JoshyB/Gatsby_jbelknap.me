@@ -7,6 +7,7 @@ import { device } from "../utils/breakpoints"
 //compontents
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import AboutMe from "../components/aboutMe"
 
 const ContentWrapper = styled.section`
   width: 100%;
@@ -22,7 +23,7 @@ const AboutPage = () => (
   <Layout>
     <SEO title="About" />
     <ContentWrapper>
-      <h1>Joshua Belknap</h1>
+      <AboutMe />
     </ContentWrapper>
   </Layout>
 )
