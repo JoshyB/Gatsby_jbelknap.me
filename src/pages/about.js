@@ -4,14 +4,13 @@ import styled from "styled-components"
 //bringing in media queries from an extrapolated file
 import { device } from "../utils/breakpoints"
 
+// Enter animation component
+import EnterAnimation from "../components/enterAnimation"
+
 //compontents
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Introduction from "../components/introduction"
-import Projects from "../components/projects"
-
-// Enter animation component. fades child components in on page load
-import EnterAnimation from "../components/enterAnimation"
+import AboutMe from "../components/aboutMe"
 
 const ContentWrapper = styled.section`
   width: 100%;
@@ -23,16 +22,15 @@ const ContentWrapper = styled.section`
   }
 `
 
-const IndexPage = () => (
+const AboutPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="About" />
     <EnterAnimation>
       <ContentWrapper>
-        <Introduction />
-        <Projects />
+        <AboutMe />
       </ContentWrapper>
     </EnterAnimation>
   </Layout>
 )
 
-export default IndexPage
+export default AboutPage
