@@ -11,6 +11,14 @@ const AboutWrapper = styled.header`
   grid-template-rows: repeat(3, auto);
   padding: 200px 25px 100px 25px;
 
+  @media ${device.laptop} {
+    grid-template-columns: 150px 1fr;
+
+    .introduction {
+      grid-column: 2;
+    }
+  }
+
   .introduction {
     grid-row: 2;
     padding: 5px;
@@ -70,7 +78,7 @@ const AboutWrapper = styled.header`
 class Introduction extends Component {
   render() {
     return (
-      <AboutWrapper key="body">
+      <AboutWrapper>
         <div className="introduction">
           <p className="eminem">Hi, my name is</p>
           <h1>Joshua Belknap.</h1>

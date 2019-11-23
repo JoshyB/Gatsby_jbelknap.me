@@ -4,6 +4,9 @@ import styled from "styled-components"
 //bringing in media queries from an extrapolated file
 import { device } from "../utils/breakpoints"
 
+// Enter animation component
+import EnterAnimation from "../components/enterAnimation"
+
 //compontents
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -22,9 +25,11 @@ const ContentWrapper = styled.section`
 const AboutPage = () => (
   <Layout>
     <SEO title="About" />
-    <ContentWrapper>
-      <AboutMe />
-    </ContentWrapper>
+    <EnterAnimation>
+      <ContentWrapper>
+        <AboutMe />
+      </ContentWrapper>
+    </EnterAnimation>
   </Layout>
 )
 

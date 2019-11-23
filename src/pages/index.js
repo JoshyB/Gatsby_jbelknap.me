@@ -10,6 +10,9 @@ import SEO from "../components/seo"
 import Introduction from "../components/introduction"
 import Projects from "../components/projects"
 
+// Enter animation component. fades child components in on page load
+import EnterAnimation from "../components/enterAnimation"
+
 const ContentWrapper = styled.section`
   width: 100%;
   display: grid;
@@ -23,10 +26,12 @@ const ContentWrapper = styled.section`
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <ContentWrapper>
-      <Introduction />
-      <Projects />
-    </ContentWrapper>
+    <EnterAnimation>
+      <ContentWrapper>
+        <Introduction />
+        <Projects />
+      </ContentWrapper>
+    </EnterAnimation>
   </Layout>
 )
 

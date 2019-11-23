@@ -43,7 +43,6 @@ class Navigation extends Component {
           <img src={logo} alt="Site Logo" />
         </Link>
         <ul className="navMenu">
-          <Link to="#projects">Projects</Link>
           <Link to="/about">About</Link>
         </ul>
       </NavWrapper>

@@ -1,9 +1,10 @@
 import React, { Component } from "react"
-import pose, { PoseGroup } from "react-pose"
 import styled from "styled-components"
 
 //bringing in media queries from an extrapolated file
-import { device } from "../utils/breakpoints"
+// import { device } from "../utils/breakpoints"
+
+//bringing in the fandin on enter animation component that wraps the entire child component
 
 //images used in header
 import portrait from "../images/JoshyB.jpg"
@@ -40,11 +41,6 @@ const AboutWrapper = styled.section`
       width: 100%;
       box-shadow: 20px 20px var(--text-shadow-primary),
         30px -30px var(--text-shadow-secondary);
-      transition: box-shadow 250ms ease-in-out;
-
-      &:hover {
-        box-shadow: 0px 0px, 0px 0px;
-      }
     }
   }
 
@@ -55,8 +51,6 @@ const AboutWrapper = styled.section`
 `
 
 class AboutMe extends Component {
-  state = { isVisible: false }
-
   render() {
     return (
       <AboutWrapper>

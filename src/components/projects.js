@@ -6,8 +6,6 @@ import SVGIcon from "./SVGIcons"
 //bringing in media queries from an extrapolated file
 import { device } from "../utils/breakpoints"
 
-//svg image
-import linkSVG from "../images/link.svg"
 import projectIcon from "../images/project_icon.svg"
 
 const ProjectWrapper = styled.section`
