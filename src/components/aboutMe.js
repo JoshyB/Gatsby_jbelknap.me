@@ -47,6 +47,18 @@ const AboutWrapper = styled.section`
   .about_body {
     width: 100%;
     grid-column: 2;
+
+    ul {
+      li {
+        list-style: none;
+        margin: 5px;
+        &:before {
+          content: "\\25b6";
+          color: var(--link-color);
+          margin-right: 10px;
+        }
+      }
+    }
   }
 `
 

@@ -83,7 +83,7 @@ class Introduction extends Component {
           <p className="eminem">Hi, my name is</p>
           <h1>Joshua Belknap.</h1>
           <h2 className="secondary_title">
-            I like to build things that live on the web.
+            I like to build things that live on the web
           </h2>
           <p className="sub_text">
             I'm a Web Developer based in{" "}

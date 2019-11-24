@@ -2,6 +2,8 @@ import React, { Component } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
+import Navlink from "./navlink"
+
 import logo from "../images/jblogo.svg"
 
 const NavWrapper = styled.nav`
@@ -28,8 +30,12 @@ const NavWrapper = styled.nav`
   .navMenu {
     margin-left: auto;
     padding: 10px;
-    a {
-      margin: 20px;
+    list-style: none;
+    display: flex;
+    li {
+      a {
+        margin: 15px;
+      }
     }
   }
 `
@@ -43,7 +49,12 @@ class Navigation extends Component {
           <img src={logo} alt="Site Logo" />
         </Link>
         <ul className="navMenu">
-          <Link to="/about">About</Link>
+          <li>
+            <Navlink to="/">HOME</Navlink>
+          </li>
+          <li>
+            <Navlink to="/about">ABOUT</Navlink>
+          </li>
         </ul>
       </NavWrapper>
     )
