@@ -24,7 +24,7 @@
     "slug": "stubblefield_leadership",
     "websiteURL": "https://stubblefieldleadership.com/",
     "images": "../images/stubblefield/stubblefield.png",
-    "description": "Stubblefield Leadership was built for Dr. John Stubblefield, an Educator, Coach, Mentor and Public Speaker who lives in North Carolina.",
+    "description": "Stubblefield Leadership was built for Dr. John Stubblefield, an Educator, Coach, Mentor and Public Speaker who lives in North Carolina",
     "tools": "Wordpress, CSS",
     "about": ""
   },
@@ -43,7 +43,7 @@
     "slug": "homeglow_imaging",
     "websiteURL": "https://www.homeglowimaging.com",
     "images": "../images/homeglowimaging/homeglowimaging.png",
-    "description": "Website for a local Real Estate Photography company operating in and around the Columbus, Ohio area.",
+    "description": "Website for a local Real Estate Photography company operating in and around the Columbus, Ohio area",
     "tools": "Javascript, HTML, Bulma(CSS Framework), PHP",
     "about": "Homeglow Imaging needed a website for marketing and a way for customers to easily get into contact with them. The client had a tight budget and timeframe so I reached for the Bulma CSS framework to quickly prototype and build out a working website. PHP was used to take care of the scheduling and contact forms."
   },
