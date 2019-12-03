@@ -55,6 +55,11 @@ class Navigation extends Component {
           <li>
             <Navlink to="/about">ABOUT</Navlink>
           </li>
+          <li>
+            <a href="mailto:seejoshcode@gmail.com" className="opaque__button">
+              Contact Me
+            </a>
+          </li>
         </ul>
       </NavWrapper>
     )

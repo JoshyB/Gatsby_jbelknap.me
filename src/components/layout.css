@@ -65,3 +65,32 @@ p {
   font-size: 1.1em;
   font-family: "Roboto", sans-serif;
 }
+
+/* anchor tag button styles */
+.opaque__button {
+  padding: 15px 20px;
+  border-radius: 3px;
+  border: 2px solid var(--link-color);
+  -webkit-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  margin-right: 30px;
+}
+
+.opaque__button:hover,
+.opaque__button:focus {
+  background: rgba(55, 241, 238, 0.2);
+}
+
+.solid__button {
+  padding: 15px 20px;
+  border-radius: 3px;
+  color: var(--primary-text);
+  background: rgba(55, 241, 238, 0.6);
+  -webkit-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+.solid__button:hover,
+.solid__button:focus {
+  background: rgba(55, 241, 238, 0.8);
+}

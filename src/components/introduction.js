@@ -46,32 +46,6 @@ const AboutWrapper = styled.header`
     margin-top: 50px;
     display: flex;
     width: 100%;
-
-    .getInTouch__button {
-      padding: 15px 20px;
-      border-radius: 3px;
-      border: 2px solid var(--link-color);
-      box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
-      margin-right: 30px;
-
-      &:hover,
-      &:focus {
-        background: rgba(55, 241, 238, 0.2);
-      }
-    }
-
-    .moreAboutMe__button {
-      padding: 15px 20px;
-      border-radius: 3px;
-      color: var(--primary-text);
-      background: rgba(55, 241, 238, 0.6);
-      box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
-
-      &:hover,
-      &:focus {
-        background: rgba(55, 241, 238, 0.8);
-      }
-    }
   }
 `
 
@@ -97,13 +71,13 @@ class Introduction extends Component {
           </p>
           <div className="contactMe">
             <a
-              className="getInTouch__button"
+              className="opaque__button"
               href="mailto:seejoshcode@gmail.com"
               arai-label="mailto link to Joshua's inbox"
             >
               Get in Touch
             </a>
-            <Link to="/about" className="moreAboutMe__button">
+            <Link to="/about" className="solid__button">
               About me →
             </Link>
           </div>
