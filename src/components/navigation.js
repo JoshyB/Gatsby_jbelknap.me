@@ -2,6 +2,9 @@ import React, { Component } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
+//bringing in media queries from an extrapolated file
+import { device } from "../utils/breakpoints"
+
 import Navlink from "./navlink"
 
 import logo from "../images/jblogo.svg"
@@ -32,9 +35,14 @@ const NavWrapper = styled.nav`
     padding: 10px;
     list-style: none;
     display: flex;
+
     li {
       a {
-        margin: 15px;
+        margin: 5px;
+
+        @media ${device.tablet} {
+          margin: 15px;
+        }
       }
     }
   }
