@@ -12,7 +12,13 @@ const Navlink = props => {
     <Link
       {...props}
       getProps={({ isCurrent }) => {
-        return { style: { opacity: isCurrent ? "1" : "0.6" } }
+        return {
+          style: {
+            color: isCurrent
+              ? "var(--text-shadow-secondary)"
+              : "var(--link-color)",
+          },
+        }
       }}
     ></Link>
   )

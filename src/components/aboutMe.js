@@ -94,12 +94,12 @@ class AboutMe extends Component {
           </ul>
           <h2>What I do for fun...</h2>
           <p>
-            I of course love to spend time with my family, be it going to parks,
-            hiking, or just hanging out at home. I like to travel as often as I
-            possibly can. I really enjoy seeing new places and having new
-            experiences. I also very much enjoy cooking. I like trying out new
-            recipes or just experimenting and coming up with my own. I like to
-            code things. Before I started doing this to make money, I built
+            I, of course love to spend time with my family, be it going to
+            parks, hiking, or just hanging out at home. I like to travel as
+            often as I possibly can. I really enjoy seeing new places and having
+            new experiences. I also very much enjoy cooking. I like trying out
+            new recipes or just experimenting and coming up with my own. I like
+            to code things. Before I started doing this to make money, I built
             things just for fun, and I still do.
           </p>
         </div>
