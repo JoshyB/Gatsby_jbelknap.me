@@ -45,7 +45,7 @@ const ProjectWrapper = styled.section`
 
     &:hover {
       transform: scale(1.1);
-      transition: transform 450ms ease-in-out;
+      transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
     }
 
     .project_tile_header {
@@ -80,10 +80,6 @@ const ProjectWrapper = styled.section`
       grid-row: 3;
       font-size: 0.8em;
       opacity: 0.8;
-    }
-
-    @media ${device.laptop} {
-      /* max-height: 500px; */
     }
   }
 `
