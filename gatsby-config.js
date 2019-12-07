@@ -3,6 +3,7 @@ module.exports = {
     title: `Joshua Belknap | Web Developer`,
     description: `Versitile Web Developer from Columbus, Ohio`,
     author: `Joshua Belknap`,
+    image: `src/images/joshyb.jpg`,
   },
   plugins: [
     `gatsby-plugin-styled-components`,
@@ -32,7 +33,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/ghost_icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/jblogo_favicon.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
