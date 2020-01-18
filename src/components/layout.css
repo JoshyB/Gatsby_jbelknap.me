@@ -6,11 +6,17 @@
 font-family: 'Righteous', cursive; */
 
 :root {
+  /* colors */
   --main-background-color: rgb(54, 61, 121);
+  --mobile-menu-background-color: rgb(54, 83, 121);
   --primary-text: #fff;
   --text-shadow-primary: rgb(116, 184, 189);
   --text-shadow-secondary: rgb(228, 36, 249);
   --link-color: rgb(55, 241, 238);
+
+  /* animation timing */
+  --duration: 0.6s;
+  --easing: cubic-bezier(0.5, 0, 0.5, 1);
 }
 
 *,
@@ -73,7 +79,7 @@ p {
   border: 2px solid var(--link-color);
   -webkit-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
-  margin-right: 30px;
+  /* margin-right: 30px; */
 }
 
 .opaque__button:hover,

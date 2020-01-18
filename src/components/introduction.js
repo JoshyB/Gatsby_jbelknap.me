@@ -46,6 +46,10 @@ const AboutWrapper = styled.header`
     margin-top: 50px;
     display: flex;
     width: 100%;
+
+    a:first-child {
+      margin-right: 30px;
+    }
   }
 `
 
