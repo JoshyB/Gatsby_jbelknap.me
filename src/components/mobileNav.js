@@ -105,7 +105,7 @@ const MobileNav = ({ viewPortHeight }) => {
             <Navlink to="/">HOME</Navlink>
           </li>
           <li>
-            <Navlink to="/about">ABOUT</Navlink>
+            <Navlink to="/about/">ABOUT</Navlink>
           </li>
           <li>
             <a href="mailto:seejoshcode@gmail.com" className="opaque__button">

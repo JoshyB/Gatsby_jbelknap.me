@@ -46,25 +46,14 @@ function getWindowWidth() {
 // ********** component code ***************
 
 const Navigation = () => {
-  const [mobileView, setMobileView] = useState(null)
   const [windowWidth, setWindowWidth] = useState(getWindowWidth())
   const [windowHeight, setWindowHeight] = useState(getWindowHeight())
 
   useEffect(() => {
-    // set mobileView when the page loads to deterine which nav to display
-    // if (getWindowWidth() < 768) {
-    //   setMobileView(true)
-    // }
     // deal with window resizing
     function handleResize() {
       setWindowHeight(getWindowHeight())
       setWindowWidth(getWindowWidth())
-      //check window width and toggle boolean to determine enable/diable desktop or mobile view;
-      // if (windowWidth < 768) {
-      //   setMobileView(true)
-      // } else if (windowWidth > 768) {
-      //   setMobileView(false)
-      // }
     }
     window.addEventListener("resize", handleResize)
     return () => window.removeEventListener("resize", handleResize)
